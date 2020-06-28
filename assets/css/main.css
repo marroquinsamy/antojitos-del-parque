@@ -22,7 +22,8 @@ header {
 }
 
 .header-text {
-    font-size: 2em;
+    font-size: 1.8em;
+    text-transform: uppercase;
     margin: 0;
 }
 
@@ -88,13 +89,9 @@ header {
 }
 
 p {
-    background-color: #323337;
+    border: solid 1px #323337;
     border-radius: 15px;
     padding: 10px;
-}
-
-p:hover {
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, .2);
 }
 
 #scroll-to-top {
