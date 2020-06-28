@@ -25,6 +25,7 @@ header {
     font-size: 1.8em;
     text-transform: uppercase;
     margin: 0;
+    color: #e8eaed;
 }
 
 #nav-button {
@@ -70,7 +71,7 @@ header {
     width: 41%;
     height: 60px;
     border-radius: 10px;
-    color: #a9acb2 !important;
+    color: #e8eaed !important;
     text-decoration: none;
 }
 
