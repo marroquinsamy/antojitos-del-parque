@@ -96,3 +96,34 @@ p {
 p:hover {
     box-shadow: 2px 2px 3px rgba(0, 0, 0, .2);
 }
+
+#scroll-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 7px;
+    height: 7px;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #d4edff;
+    color: #0a95fb;
+    padding: 24px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, .2);
+    transition-property: background, color, bottom, opacity, visibility;
+    transition-duration: .25s;
+}
+
+#scroll-to-top[data-show="false"] {
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#scroll-to-top:hover {
+    cursor: pointer;
+    opacity: .8;
+}
