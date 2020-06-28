@@ -38,10 +38,21 @@ header {
     opacity: .8;
 }
 
+.hidden-nav-div {
+    background-color: red;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
 #hidden-nav {
-    display: none;
+    display: flex;
+    position: absolute;
     width: 75%;
     margin: auto;
+    transition: top .25s;
+    background-color: #202125;
     margin-bottom: 25px;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -55,7 +66,7 @@ header {
                 0 16px 16px rgba(0, 0, 0, .12);
     /* transform: translateY(-220px); */
     z-index: 9;
-    
+    top: -230px;
 }
 
 .nav-option {

@@ -1,23 +1,32 @@
 let aux = 0;
-document.getElementById("nav-button").addEventListener("click", function() {
+let navButton = document.getElementById("nav-button");
+let hiddenNav = document.getElementById("hidden-nav");
+let content = document.getElementsByClassName("content");
+console.log(content);
+navButton.addEventListener("click", function() {
     if (aux == 0) {
-        document.getElementById("hidden-nav").style.display = "flex";
-        document.getElementById("nav-button").classList.remove("fa-ellipsis-h");
-        document.getElementById("nav-button").style.color = "#f28b82";
-        document.getElementById("nav-button").classList.add("fa-window-close");
+        hiddenNav.style.top = "0";
+        navButton.classList.remove("fa-ellipsis-h");
+        navButton.style.color = "#f28b82";
+        navButton.classList.add("fa-window-close");
+        for (let i = 0; i < content.length; i++) {
+            content[i].style.opacity = ".3";
+        }
         aux++;
     } else {
-        document.getElementById("hidden-nav").style.display = "none";
-        document.getElementById("nav-button").classList.remove("fa-window-close");
-        document.getElementById("nav-button").style.color = "inherit";
-        document.getElementById("nav-button").classList.add("fa-ellipsis-h");
+        hiddenNav.style.top = "-230px";
+        navButton.classList.remove("fa-window-close");
+        navButton.style.color = "inherit";
+        navButton.classList.add("fa-ellipsis-h");
+        for (let i = 0; i < content.length; i++) {
+            content[i].style.opacity = "1";
+        }
         aux = 0;
     }
 });
 
 const scrollToTop = document.getElementById("scroll-to-top");
 let dataShow = false;
-
 window.addEventListener("scroll", ()=>{
     if (window.scrollY > 50 && !dataShow) {
         scrollToTop.setAttribute("data-show", "true");
