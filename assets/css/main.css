@@ -18,7 +18,7 @@ header {
 
 .header-icon {
     margin: 10px 0;
-    max-height: 55px;
+    /*Se comentó porque se colocó en el archivo index.html con fin de optimizar la carga del espacio para la imagen max-height: 55px; */
 }
 
 .header-text {
