@@ -46,7 +46,7 @@ header {
     height: auto;
 }
 
-#hidden-nav {
+nav {
     display: flex;
     position: absolute;
     width: 75%;
