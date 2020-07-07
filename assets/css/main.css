@@ -1,12 +1,29 @@
+/* 
+    COLORES
+    Fondo: 202125
+    Segundo plano o tarjetas: 323337
+    Títulos: e8eaed
+    Texto: a9acb2
+    Bordes de tarjetas: 5f6368
+*/
+
+:root {
+    --background: #202125;
+    --cards: #323337;
+    --cards-border: 1px solid #5f6368;
+    --titles: #e8eaed;
+    --text: #a9acb2;
+}
+
 body {
-    background-color: #202125;
+    background-color: var(--background);
     height: 100vh;
     font-family: 'Ubuntu', sans-serif;
-    color: #a9acb2;
+    color: var(--text);
 }
 
 header {
-    background-color: #202125;
+    background-color: var(--background);
     display: flex;
     position: relative;
     z-index: 10;
@@ -16,16 +33,16 @@ header {
     padding: 0 20px;
 }
 
-.header-icon {
+#header-icon {
     margin: 10px 0;
     /*Se comentó porque se colocó en el archivo index.html con fin de optimizar la carga del espacio para la imagen max-height: 55px; */
 }
 
-.header-text {
+#header-text {
     font-size: 1.8em;
     text-transform: uppercase;
     margin: 0;
-    color: #e8eaed;
+    color: var(--titles);
 }
 
 #nav-button {
@@ -35,10 +52,13 @@ header {
 
 #nav-button:hover {
     cursor: pointer;
+}
+
+#nav-button:active {
     opacity: .8;
 }
 
-.hidden-nav-div {
+.nav-container {
     background-color: red;
     position: relative;
     display: flex;
@@ -52,7 +72,7 @@ nav {
     width: 75%;
     margin: auto;
     transition: top .25s;
-    background-color: #202125;
+    background-color: var(--background);
     margin-bottom: 25px;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -76,13 +96,13 @@ nav {
     align-items: center;
     text-align: center;
     line-height: 1.2em;
-    background-color: #323337;
+    background-color: var(--cards);
     margin: 5px 0;
     padding: 8px;
     width: 41%;
     height: 60px;
     border-radius: 10px;
-    color: #e8eaed !important;
+    color: var(--titles) !important;
     text-decoration: none;
 }
 
@@ -92,6 +112,9 @@ nav {
 
 .nav-option:hover {
     cursor: pointer;
+}
+
+.nav-option:active {
     opacity: .8;
 }
 
@@ -101,7 +124,7 @@ nav {
 }
 
 p {
-    border: solid 1px #5f6368;
+    border: var(--cards-border);
     border-radius: 15px;
     padding: 10px;
 }
