@@ -157,5 +157,8 @@ p {
 
 #scroll-to-top:hover {
     cursor: pointer;
+}
+
+#scroll-to-top:active {
     opacity: .8;
 }
