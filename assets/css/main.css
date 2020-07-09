@@ -7,6 +7,11 @@
   Bordes de tarjetas: 5f6368
 */
 
+@font-face {
+  font-family: 'Product Sans';
+  src: local('Product Sans'), url('/assets/fonts/ProductSans-Regular.woff') format('woff');
+}
+
 :root {
   --background: #202125;
   --cards: #323337;
@@ -18,7 +23,7 @@
 body {
   background-color: var(--background);
   height: 100vh;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Product Sans', 'Ubuntu', sans-serif;
   color: var(--text);
 }
 
@@ -40,7 +45,6 @@ body {
 
 #header-text {
   font-size: 1.8em;
-  text-transform: uppercase;
   margin: 0;
   color: var(--titles);
 }
@@ -136,7 +140,6 @@ body {
 
 .main-page-section header h2 {
   color: var(--titles);
-  text-transform: uppercase;
   font-size: 1.1em;
   margin: 3px auto;
 }
@@ -159,39 +162,64 @@ body {
   display: none;
 }
 
-.articles-link {
+.article-link {
   text-decoration: none;
-}
-
-a.main-page-section-article {
-  min-width: 50%;
-  border-radius: inherit;
+  min-width: 60%;
+  height: 110px;
   background-color: var(--cards);
+  color: var(--text);
   padding: 8px;
   margin: 5px 5px;
   border-radius: 15px;
-  color: var(--text);
 }
 
-.main-page-section-article h3 {
+.article-link article {
+  height: 100%;
+}
+
+.article-information {
+  height: 75%;
+}
+
+.article-information h3 {
   color: var(--titles);
   font-size: 1em;
   margin: 3px auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-.main-page-section-article p {
+.article-information p {
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.price-container {
+  height: 25%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.price {
+  /* color: #1e8e3d; */
+  color: #e87009;
+  font-weight: bold;
   font-size: .9em;
-  margin: 3px auto;
+  /* background-color: #e6f4ea; */
+  background-color: #fdf7df;
+  padding: 5px;
+  margin-top: 2px;
+  border-radius: 10px;
+  height: auto;
 }
 
-.main-page-section-article p.price {
-  float: right;
-  background-color: #1e8e3d;
-  /* border: 1px solid #e6f4ea; */
-  color: #e6f4ea;
-  font-size: 1em;
-  padding: 5px;
-  border-radius: 10px;
+.price i {
+  margin-right: 4px;
 }
 
 #scroll-to-top {
