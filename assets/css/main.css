@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: 'Product Sans';
-  src: local('Product Sans'), url('/assets/fonts/ProductSans-Regular.woff') format('woff');
+  src: local('Product Sans'), url('../fonts/ProductSans-Regular.woff') format('woff');
 }
 
 :root {
